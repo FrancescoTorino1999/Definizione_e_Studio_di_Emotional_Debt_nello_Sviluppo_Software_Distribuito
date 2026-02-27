@@ -160,8 +160,6 @@ Di seguito sono riportati tutti i passaggi necessari per replicare integralmente
 
 4. Esportare i risultati in formato CSV.
 
-Output atteso:
-
 
 ---
 
@@ -173,6 +171,7 @@ La pulizia viene effettuata tramite script Python.
 
 ```bash
 python Scripts/format_for_plssem.py
+```
 
 3️⃣ Analisi PLS-SEM
 Software
@@ -197,11 +196,11 @@ Livello di significatività: α = 0.05
 
 Eseguire:
 
-PLS Algorithm
+- PLS Algorithm
 
-Bootstrapping
+- Bootstrapping
 
-PLSpredict
+- PLSpredict
 
 4️⃣ Verifica dei risultati
 
@@ -211,36 +210,24 @@ pls-sem/Exports/
 
 In particolare verificare:
 
-Outer Loadings
+- Outer Loadings
 
-Cronbach’s Alpha
+- Cronbach’s Alpha
 
-rho_A
+- rho_A
 
-Composite Reliability
+- Composite Reliability
 
-AVE
+- AVE
 
-HTMT
+- HTMT
 
-VIF
+- VIF
 
-Path coefficients
+- Path coefficients
 
-R²
+- R²
 
-f²
+- f²
 
-Q²_predict
-
-La replica è considerata corretta se i risultati coincidono con quelli esportati negli Excel forniti.
-
-5️⃣ Riproducibilità completa
-
-Per una replica completa:
-
-Utilizzare lo stesso dataset pulito (survey_pls.csv)
-
-Mantenere identica configurazione di bootstrapping
-
-Non modificare la struttura riflessiva dei costrutti
+- Q²_predict
