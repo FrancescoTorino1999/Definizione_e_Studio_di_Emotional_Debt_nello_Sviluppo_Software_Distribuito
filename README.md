@@ -5,7 +5,6 @@ Negli ultimi anni, la Software Engineering ha riconosciuto l’impatto delle dim
 
 Questo lavoro introduce il concetto di:
 
-* 🔥 Burnout: condizione psicologica individuale
 * 💳 Emotional Debt: accumulo di tensione emotiva non elaborata
 * 👃 Emotional Smells: manifestazioni socio-tecniche osservabili
 
