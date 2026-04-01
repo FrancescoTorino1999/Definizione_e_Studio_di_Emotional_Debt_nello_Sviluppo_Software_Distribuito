@@ -1,233 +1,195 @@
 # Emotional Debt nella Software Engineering
 
-Questo repository contiene tutti i materiali necessari per comprendere, replicare e analizzare lo studio empirico sul concetto di **Emotional Debt** nel contesto della Software Engineering.
+Questo repository accompagna la tesi magistrale “Definizione e Studio di Emotional Debt nello Sviluppo Software Distribuito” e contiene tutti i materiali necessari per comprendere, replicare e validare uno studio empirico sul ruolo dei fattori emotivi nei processi di sviluppo software.
 
-Il progetto introduce e valida empiricamente il costrutto di:
+Negli ultimi anni, la Software Engineering ha riconosciuto l’impatto delle dimensioni psicologiche sulla produttività e sulla qualità del software. Tuttavia, manca ancora una formalizzazione chiara dei meccanismi attraverso cui condizioni come il burnout si traducono in effetti osservabili nei repository.
 
-- 🔥 Burnout  
-- 💳 Emotional Debt  
-- 👃 Emotional Smells  
+Questo lavoro introduce il concetto di:
 
-attraverso un modello strutturale analizzato con metodologia **PLS-SEM (Partial Least Squares Structural Equation Modeling)**.
+* 🔥 Burnout: condizione psicologica individuale
+* 💳 Emotional Debt: accumulo di tensione emotiva non elaborata
+* 👃 Emotional Smells: manifestazioni socio-tecniche osservabili
 
-L’obiettivo è colmare il divario tra dimensione psicologica individuale e manifestazioni socio-tecniche osservabili nei processi di sviluppo software.
+e propone un modello che collega questi tre livelli, colmando il divario tra dimensione individuale e comportamento osservabile nei sistemi software.
 
----
+## 🎯 Obiettivo della tesi
+
+L’obiettivo principale è:
+
+formalizzare il costrutto di Emotional Debt
+dimostrare empiricamente il suo ruolo di variabile mediatrice
+identificare proxy osservabili nei repository (Emotional Smells)
+
+Il lavoro si colloca all’intersezione tra:
+
+* Software Engineering empirica
+* Sentiment Analysis e NLP
+* Sistemi socio-tecnici
+* AI per analisi del codice
+
+#] 🧪 Metodo di ricerca
+
+Lo studio adotta un approccio quantitativo basato su:
+
+Survey empirica (Qualtrics + Prolific)
+Costruzione di costrutti latenti
+Analisi tramite PLS-SEM (Partial Least Squares Structural Equation Modeling)
+
+Modello analizzato:
+
+Burnout → Emotional Debt → Emotional Smells → Consequences
+
+## 📊 Risultati principali
+
+L’analisi empirica mostra che:
+
+Il Burnout spiega oltre il 60% della varianza dell’Emotional Debt
+L’Emotional Debt ha un impatto significativo sugli Emotional Smells
+È presente una mediazione significativa tra burnout e comportamenti osservabili
+
+Questi risultati suggeriscono che le condizioni psicologiche influenzano il software in modo indiretto, attraverso un debito emotivo accumulato che si manifesta nei processi di sviluppo.
 
 # 📂 Struttura del Repository
-
 .
 ├── survey/
 ├── data/
 ├── pls-sem/
-│ ├── SmartPLS project/
-│ └── Exports/
+│   ├── SmartPLS project/
+│   └── Exports/
 ├── Scripts/
 ├── conceptual/
 └── thesis/
+📝 survey/
 
-
----
-
-# 📝 survey/
-
-Contiene il questionario utilizzato per la raccolta dati tramite Qualtrics.
+Contiene il questionario utilizzato per la raccolta dati.
 
 Include:
 
-- Esportazione del survey
-- Struttura delle domande
-- Item di misura relativi a:
-  - Burnout
-  - Emotional Debt
-  - Emotional Smells
+Struttura completa del survey
+Item di misura per:
+* Burnout
+* Emotional Debt
+* Emotional Smells
 
-Questa cartella consente la replica completa della fase di raccolta dati.
-
----
+Permette la replica della fase di raccolta dati.
 
 # 📊 data/
 
-Contiene i dataset utilizzati per l’analisi.
+Dataset utilizzati nello studio.
 
-### File presenti
+survey.csv → dati grezzi Qualtrics
+survey_pls.csv → dataset pulito per SmartPLS
 
-- `survey.csv` → dataset grezzo esportato da Qualtrics  
-- `survey_pls.csv` → dataset pulito e formattato per SmartPLS  
+Il dataset finale è ottenuto tramite gli script nella cartella Scripts.
 
-Il file pulito è generato tramite script Python presenti nella cartella `Scripts`.
+🧹 Scripts/
 
----
+Script Python per la preparazione dei dati.
 
-# 📈 pls-sem/
-
-Contiene tutti i materiali relativi all’analisi PLS-SEM.
-
-## 🧩 SmartPLS project/
-
-- File completo del progetto SmartPLS
-- Specifica del modello di misura
-- Specifica del modello strutturale
-- Configurazione bootstrapping (5000 subsamples, test a due code, BCa CI)
-
-## 📤 Exports/
-
-Contiene le esportazioni dei risultati:
-
-- `Bootstrapping.xlsx`
-- `Confirmatory Tetrad Analysis.xlsx`
-- `Principal Components Analysis.xlsx`
-- `PLS Predict.xlsx`
-- `PLS Algorithm.xlsx`
-
-Permette la verifica indipendente di:
-
-- Affidabilità interna
-- Validità convergente
-- Validità discriminante
-- Coefficienti di percorso
-- R²
-- f²
-- Q²_predict
-- HTMT
-- VIF
-
----
-
-# 🧹 Scripts/
-
-Contiene gli script Python per la preparazione dei dati.
-
-## format_for_plssem.py
+format_for_plssem.py
 
 Lo script:
 
 - Rimuove risposte incomplete
 - Applica filtri di qualità (attention check)
-- Applica filtro sul tempo di completamento
+- Filtra per tempo minimo di completamento
 - Rinomina e riorganizza le variabili
-- Genera `survey_pls.csv`
-
----
-
-## ▶ Come eseguire lo script
-
-```bash
-python format_for_plssem.py
-```
+- Genera survey_pls.csv
+- Esecuzione
+- python Scripts/format_for_plssem.py
 
 Requisiti
+- pip install pandas numpy
 
-Python 3.9+
+# 📈 pls-sem/
 
-pandas
+Materiali relativi all’analisi PLS-SEM.
 
-numpy
+SmartPLS project/
+Modello di misura (outer model)
+Modello strutturale (inner model)
+Configurazione bootstrapping:
+5000 subsamples
+test a due code
+α = 0.05
 
-Installazione dipendenze:
+# Exports/
 
-pip install pandas numpy
+File per verifica indipendente dei risultati:
+
+Bootstrapping
+PLS Algorithm
+PLSpredict
+HTMT
+VIF
+PCA
 
 # 🧠 conceptual/
 
-Contiene il modello concettuale alla base dello studio.
-
-Il file (generato con draw.io) rappresenta:
+Contiene il modello concettuale della tesi:
 
 Formalizzazione teorica dell’Emotional Debt
+Relazioni tra costrutti
 
 # 🔁 Replica completa dello studio
+1. Raccolta dati
 
-Di seguito sono riportati tutti i passaggi necessari per replicare integralmente lo studio sull’Emotional Debt.
+* Qualtrics → somministrazione survey
+* Prolific → reclutamento partecipanti
 
----
+Filtri applicati:
 
-## 1️⃣ Raccolta dei dati
+Attention check
+Tempo minimo di completamento
+Sviluppatori attivi
 
-### Strumenti utilizzati
-- Qualtrics (somministrazione survey)
-- Prolific (reclutamento partecipanti)
-
-### Procedura
-
-1. Distribuire il questionario tramite Qualtrics.
-2. Reclutare sviluppatori software tramite Prolific.
-3. Applicare i seguenti filtri:
-
-   - ✔ Attention check obbligatorio  
-   - ✔ Filtro sul tempo minimo di completamento  
-   - ✔ Criteri di inclusione (sviluppatori attivi)  
-
-4. Esportare i risultati in formato CSV.
-
-
----
-
-## 2️⃣ Pulizia e preparazione dei dati
-
-La pulizia viene effettuata tramite script Python.
-
-### Esecuzione
-
-```bash
+2. Preparazione dati
 python Scripts/format_for_plssem.py
-```
 
-3️⃣ Analisi PLS-SEM
-Software
+3. Analisi PLS-SEM
 
-SmartPLS 4
-
-Procedura
-
-Aprire SmartPLS.
-
-Caricare il progetto presente in:
-
-pls-sem/SmartPLS project/
-
-Verificare configurazioni:
-
-Bootstrapping: 5000 subsamples
-
-Test a due code
-
-Livello di significatività: α = 0.05
+Software: SmartPLS 4
 
 Eseguire:
 
-- PLS Algorithm
+1. PLS Algorithm
+2. Bootstrapping
+3. PLSpredict
 
-- Bootstrapping
+4. Validazione risultati
 
-- PLSpredict
+Verificare:
 
-4️⃣ Verifica dei risultati
-
-Confrontare i risultati ottenuti con i file presenti in:
-
-pls-sem/Exports/
-
-In particolare verificare:
-
-- Outer Loadings
+Affidabilità
 
 - Cronbach’s Alpha
-
+- Composite Reliability
 - rho_A
 
-- Composite Reliability
+Validità
 
 - AVE
-
 - HTMT
 
-- VIF
+Modello strutturale
 
 - Path coefficients
-
 - R²
-
 - f²
-
 - Q²_predict
+- VIF
+
+# 💡 Contributo scientifico
+
+Questo lavoro contribuisce allo stato dell’arte:
+
+* Introducendo Emotional Debt come nuovo costrutto
+* Collegando burnout e comportamento nei repository
+* Proponendo un approccio misurabile e replicabile
+* Aprendo alla possibilità di strumenti automatici di detection
+
+# 🚀 Sviluppi futuri
+* Detection automatica di Emotional Smells nei repository
+* Integrazione con pipeline CI/CD
+* Supporto al decision-making nei team
+* Analisi dell’impatto della GenAI sul debito emotivo
