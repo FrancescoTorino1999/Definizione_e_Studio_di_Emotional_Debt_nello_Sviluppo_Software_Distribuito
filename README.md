@@ -52,7 +52,7 @@ Questi risultati suggeriscono che le condizioni psicologiche influenzano il soft
 ## 📂 Struttura del Repository
 .
 ├── survey/   
-├── data/ 
+├── data/  
 ├── pls-sem/  
 │   ├── SmartPLS project/  
 │   └── Exports/  
