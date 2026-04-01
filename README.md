@@ -27,7 +27,7 @@ Il lavoro si colloca all’intersezione tra:
 * Sistemi socio-tecnici
 * AI per analisi del codice
 
-#] 🧪 Metodo di ricerca
+## 🧪 Metodo di ricerca
 
 Lo studio adotta un approccio quantitativo basato su:
 
@@ -50,16 +50,8 @@ L’Emotional Debt ha un impatto significativo sugli Emotional Smells
 Questi risultati suggeriscono che le condizioni psicologiche influenzano il software in modo indiretto, attraverso un debito emotivo accumulato che si manifesta nei processi di sviluppo.
 
 ## 📂 Struttura del Repository
-.
-├── survey/   
-├── data/  
-├── pls-sem/  
-│   ├── SmartPLS project/  
-│   └── Exports/  
-├── Scripts/  
-├── conceptual/  
-└── thesis/  
-📝 survey/  
+
+### 📝 survey/  
 
 Contiene il questionario utilizzato per la raccolta dati.
 
@@ -73,7 +65,7 @@ Item di misura per:
 
 Permette la replica della fase di raccolta dati.
 
-## 📊 data/
+### 📊 data/
 
 Dataset utilizzati nello studio.
 
@@ -82,7 +74,7 @@ survey_pls.csv → dataset pulito per SmartPLS
 
 Il dataset finale è ottenuto tramite gli script nella cartella Scripts.
 
-## 🧹 Scripts/
+### 🧹 Scripts/
 
 Script Python per la preparazione dei dati.
 
@@ -101,7 +93,7 @@ Lo script:
 Requisiti
 - pip install pandas numpy
 
-## 📈 pls-sem/
+### 📈 pls-sem/
 
 Materiali relativi all’analisi PLS-SEM.
 
@@ -113,7 +105,7 @@ Configurazione bootstrapping:
 test a due code
 α = 0.05
 
-## Exports/
+### Exports/
 
 File per verifica indipendente dei risultati:
 
@@ -124,12 +116,16 @@ HTMT
 VIF
 PCA
 
-## 🧠 conceptual/
+### 🧠 conceptual/
 
 Contiene il modello concettuale della tesi:
 
 Formalizzazione teorica dell’Emotional Debt
 Relazioni tra costrutti
+
+### 📄 thesis/
+
+Contiene l’elaborato finale della tesi magistrale in versione PDF.
 
 ## 🔁 Replica completa dello studio
 ### 1. Raccolta dati
