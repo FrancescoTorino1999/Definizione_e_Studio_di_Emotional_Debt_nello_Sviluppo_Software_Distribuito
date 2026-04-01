@@ -147,24 +147,24 @@ Eseguire:
 
 Verificare:
 
-Affidabilità
+- Affidabilità
 
-- Cronbach’s Alpha
-- Composite Reliability
-- rho_A
+  - Cronbach’s Alpha
+  - Composite Reliability
+  - rho_A
 
-Validità
+- Validità
 
-- AVE
-- HTMT
+  - AVE
+  - HTMT
 
-Modello strutturale
+- Modello strutturale
 
-- Path coefficients
-- R²
-- f²
-- Q²_predict
-- VIF
+  - Path coefficients
+  - R²
+  - f²
+  - Q²_predict
+  - VIF
 
 ## 💡 Contributo scientifico
 
