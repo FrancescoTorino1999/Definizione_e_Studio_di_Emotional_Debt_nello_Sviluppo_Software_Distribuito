@@ -56,7 +56,7 @@ Questi risultati suggeriscono che le condizioni psicologiche influenzano il soft
 ├── pls-sem/  
 │   ├── SmartPLS project/  
 │   └── Exports/  
-├── Scripts/ 
+├── Scripts/  
 ├── conceptual/  
 └── thesis/  
 📝 survey/  
