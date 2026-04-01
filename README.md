@@ -1,6 +1,5 @@
 # Emotional Debt nella Software Engineering
 
-Questo repository accompagna la tesi magistrale “Definizione e Studio di Emotional Debt nello Sviluppo Software Distribuito” e contiene tutti i materiali necessari per comprendere, replicare e validare uno studio empirico sul ruolo dei fattori emotivi nei processi di sviluppo software.
 
 Negli ultimi anni, la Software Engineering ha riconosciuto l’impatto delle dimensioni psicologiche sulla produttività e sulla qualità del software. Tuttavia, manca ancora una formalizzazione chiara dei meccanismi attraverso cui condizioni come il burnout si traducono in effetti osservabili nei repository.
 
@@ -11,6 +10,9 @@ Questo lavoro introduce il concetto di:
 * 👃 Emotional Smells: manifestazioni socio-tecniche osservabili
 
 e propone un modello che collega questi tre livelli, colmando il divario tra dimensione individuale e comportamento osservabile nei sistemi software.
+
+Questo repository accompagna la tesi magistrale “Definizione e Studio di Emotional Debt nello Sviluppo Software Distribuito” e contiene tutti i materiali necessari per comprendere, replicare e validare uno studio empirico sul ruolo dei fattori emotivi nei processi di sviluppo software.
+
 
 ## 🎯 Obiettivo della tesi
 
