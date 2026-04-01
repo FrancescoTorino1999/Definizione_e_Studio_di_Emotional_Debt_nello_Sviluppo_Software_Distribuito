@@ -16,38 +16,29 @@ Questo repository accompagna la tesi magistrale “Definizione e Studio di Emoti
 
 ## 🎯 Obiettivo della tesi
 
-L’obiettivo principale è:
-
-formalizzare il costrutto di Emotional Debt
-dimostrare empiricamente il suo ruolo di variabile mediatrice
-identificare proxy osservabili nei repository (Emotional Smells)
-
-Il lavoro si colloca all’intersezione tra:
-
-* Software Engineering empirica
-* Sentiment Analysis e NLP
-* Sistemi socio-tecnici
-* AI per analisi del codice
+L’obiettivo principale di questa tesi è definire, formalizzare e validare empiricamente il concetto di Emotional Debt nella Software Engineering, mostrando come il burnout degli sviluppatori possa tradursi in un debito socio-emotivo osservabile attraverso specifici pattern comportamentali nei repository software.  
+Il lavoro colma il divario tra studi sulle emozioni e le metafore di debito esistenti, introducendo un modello che consente di interpretare e rilevare sistematicamente tali fenomeni.  
+L’identificazione degli Emotional Smells permette infine di abilitare interventi mirati, con benefici sia a livello individuale che organizzativo.  
 
 ## 🧪 Metodo di ricerca
 
 Lo studio adotta un approccio quantitativo basato su:
 
-Survey empirica (Qualtrics + Prolific)
-Costruzione di costrutti latenti
-Analisi tramite PLS-SEM (Partial Least Squares Structural Equation Modeling)
+1. Survey empirica (Qualtrics)
+2. Costruzione di costrutti latenti
+3. Analisi tramite PLS-SEM (Partial Least Squares Structural Equation Modeling)
 
-Modello analizzato:
+### Modello analizzato:
 
-Burnout → Emotional Debt → Emotional Smells → Consequences
+Burnout → Emotional Debt → Emotional Smells
 
 ## 📊 Risultati principali
 
 L’analisi empirica mostra che:
 
-Il Burnout spiega oltre il 60% della varianza dell’Emotional Debt
-L’Emotional Debt ha un impatto significativo sugli Emotional Smells
-È presente una mediazione significativa tra burnout e comportamenti osservabili
+- Il Burnout spiega oltre il 61.3% della varianza dell’Emotional Debt
+- L’Emotional Debt ha un impatto del 45.4% sugli Emotional Smells
+- È presente una mediazione significativa tra burnout e comportamenti osservabili
 
 Questi risultati suggeriscono che le condizioni psicologiche influenzano il software in modo indiretto, attraverso un debito emotivo accumulato che si manifesta nei processi di sviluppo.
 
@@ -89,47 +80,55 @@ Lo script:
 - Filtra per tempo minimo di completamento
 - Rinomina e riorganizza le variabili
 - Genera survey_pls.csv
-- Esecuzione
-- python Scripts/format_for_plssem.py
 
-Requisiti
-- pip install pandas numpy
+#### Esecuzione
+
+```bash
+python Scripts/format_for_plssem.py
+```
+
+#### Requisiti
+
+```bash
+pip install pandas numpy
+```
 
 ### 📈 pls-sem/
 
 Materiali relativi all’analisi PLS-SEM.
 
-SmartPLS project/
-Modello di misura (outer model)
-Modello strutturale (inner model)
-Configurazione bootstrapping:
-5000 subsamples
-test a due code
-α = 0.05
+### SmartPLS project/
+
+- Modello di misura (outer model)
+- Modello strutturale (inner model)
+- Configurazione bootstrapping:
+  - 5000 subsamples
+  - test a due code
+  - α = 0.05
 
 ### Exports/
 
 File per verifica indipendente dei risultati:
 
-Bootstrapping
-PLS Algorithm
-PLSpredict
-HTMT
-VIF
-PCA
+- Bootstrapping
+- PLS Algorithm
+- PLSpredict
+- HTMT
+- VIF
+- PCA
 
 ### 🧠 conceptual/
 
 Contiene il modello concettuale della tesi:
 
-Formalizzazione teorica dell’Emotional Debt
-Relazioni tra costrutti
+Formalizzazione teorica dell’Emotional Debt tramite studio dello stato dell'arte
 
 ### 📄 thesis/
 
 Contiene l’elaborato finale della tesi magistrale in versione PDF.
 
 ## 🔁 Replica completa dello studio
+
 ### 1. Raccolta dati
 
 * Qualtrics → somministrazione survey
@@ -137,12 +136,15 @@ Contiene l’elaborato finale della tesi magistrale in versione PDF.
 
 Filtri applicati:
 
-Attention check
-Tempo minimo di completamento
-Sviluppatori attivi
+1. Attention check
+2. Tempo minimo di completamento
+3. Sviluppatori attivi
 
 ### 2. Preparazione dati
+
+```bash
 python Scripts/format_for_plssem.py
+```
 
 ### 3. Analisi PLS-SEM
 
@@ -153,7 +155,6 @@ Eseguire:
 1. PLS Algorithm
 2. Bootstrapping
 3. PLSpredict
-
 4. Validazione risultati
 
 Verificare:
