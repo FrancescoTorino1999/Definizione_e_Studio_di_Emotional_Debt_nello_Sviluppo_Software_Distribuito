@@ -49,17 +49,17 @@ L’Emotional Debt ha un impatto significativo sugli Emotional Smells
 
 Questi risultati suggeriscono che le condizioni psicologiche influenzano il software in modo indiretto, attraverso un debito emotivo accumulato che si manifesta nei processi di sviluppo.
 
-# 📂 Struttura del Repository
+## 📂 Struttura del Repository
 .
-├── survey/
-├── data/
-├── pls-sem/
-│   ├── SmartPLS project/
-│   └── Exports/
-├── Scripts/
-├── conceptual/
-└── thesis/
-📝 survey/
+├── survey/   
+├── data/ 
+├── pls-sem/  
+│   ├── SmartPLS project/  
+│   └── Exports/  
+├── Scripts/ 
+├── conceptual/  
+└── thesis/  
+📝 survey/  
 
 Contiene il questionario utilizzato per la raccolta dati.
 
@@ -73,7 +73,7 @@ Item di misura per:
 
 Permette la replica della fase di raccolta dati.
 
-# 📊 data/
+## 📊 data/
 
 Dataset utilizzati nello studio.
 
@@ -82,7 +82,7 @@ survey_pls.csv → dataset pulito per SmartPLS
 
 Il dataset finale è ottenuto tramite gli script nella cartella Scripts.
 
-🧹 Scripts/
+## 🧹 Scripts/
 
 Script Python per la preparazione dei dati.
 
@@ -101,7 +101,7 @@ Lo script:
 Requisiti
 - pip install pandas numpy
 
-# 📈 pls-sem/
+## 📈 pls-sem/
 
 Materiali relativi all’analisi PLS-SEM.
 
@@ -113,7 +113,7 @@ Configurazione bootstrapping:
 test a due code
 α = 0.05
 
-# Exports/
+## Exports/
 
 File per verifica indipendente dei risultati:
 
@@ -124,15 +124,15 @@ HTMT
 VIF
 PCA
 
-# 🧠 conceptual/
+## 🧠 conceptual/
 
 Contiene il modello concettuale della tesi:
 
 Formalizzazione teorica dell’Emotional Debt
 Relazioni tra costrutti
 
-# 🔁 Replica completa dello studio
-1. Raccolta dati
+## 🔁 Replica completa dello studio
+### 1. Raccolta dati
 
 * Qualtrics → somministrazione survey
 * Prolific → reclutamento partecipanti
@@ -143,10 +143,10 @@ Attention check
 Tempo minimo di completamento
 Sviluppatori attivi
 
-2. Preparazione dati
+### 2. Preparazione dati
 python Scripts/format_for_plssem.py
 
-3. Analisi PLS-SEM
+### 3. Analisi PLS-SEM
 
 Software: SmartPLS 4
 
@@ -179,7 +179,7 @@ Modello strutturale
 - Q²_predict
 - VIF
 
-# 💡 Contributo scientifico
+## 💡 Contributo scientifico
 
 Questo lavoro contribuisce allo stato dell’arte:
 
@@ -188,7 +188,7 @@ Questo lavoro contribuisce allo stato dell’arte:
 * Proponendo un approccio misurabile e replicabile
 * Aprendo alla possibilità di strumenti automatici di detection
 
-# 🚀 Sviluppi futuri
+## 🚀 Sviluppi futuri
 * Detection automatica di Emotional Smells nei repository
 * Integrazione con pipeline CI/CD
 * Supporto al decision-making nei team
